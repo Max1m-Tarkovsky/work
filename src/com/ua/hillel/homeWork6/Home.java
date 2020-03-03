@@ -1,16 +1,16 @@
-package com.ua.hillel.homeWork5;
+package com.ua.hillel.homeWork6;
 
-import com.ua.hillel.homeWork6.LovePeople;
+
 
 public class Home extends Animals implements LovePeople {
 
     protected String name;
-    protected boolean vaccinated;
+    protected boolean Vaccinated;
 
     public Home(int id, double age, double weight, String color, String name, boolean isVaccinated) {
         super(id, age, weight, color);
         this.name = name;
-        this.vaccinated = isVaccinated;
+        this.Vaccinated = isVaccinated;
     }
 
     public String getName() {
@@ -22,11 +22,11 @@ public class Home extends Animals implements LovePeople {
     }
 
     public boolean isVaccinated() {
-        return vaccinated;
+        return Vaccinated;
     }
 
     public void setVaccinated(boolean vaccinated) {
-        this.vaccinated = vaccinated;
+        Vaccinated = vaccinated;
     }
 
     @Override
@@ -34,9 +34,9 @@ public class Home extends Animals implements LovePeople {
         return super.voice() + " my name is " + name + ".";
     }
 
+
     @Override
     public boolean lovePeople() {
         return true;
     }
-
 }

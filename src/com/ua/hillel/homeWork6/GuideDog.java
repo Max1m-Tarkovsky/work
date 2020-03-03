@@ -1,21 +1,23 @@
-package com.ua.hillel.homeWork5;
+package com.ua.hillel.homeWork6;
+
+
 
 public class GuideDog extends Home {
 
-    protected boolean trained;
+    protected boolean isTrained;
 
 
     public void setTrained(boolean trained) {
-        trained = trained;
+        isTrained = trained;
     }
 
     public GuideDog(int id, double age, double weight, String color, String name, boolean isVaccinated, boolean isTrained) {
         super(id, age, weight, color, name, isVaccinated);
-        this.trained = isTrained;
+        this.isTrained = isTrained;
     }
 
     public boolean isTrained() {
-        return trained;
+        return isTrained;
     }
 
     public String goHome() {
@@ -23,7 +25,12 @@ public class GuideDog extends Home {
     }
 
     @Override
+    public boolean lovePeople() {
+        return super.lovePeople();
+    }
+
+    @Override
     public String voice() {
-        return super.voice() + " i can take you home! ";
+        return super.voice() + "I can take you home! ";
     }
 }

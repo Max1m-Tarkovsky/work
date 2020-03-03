@@ -1,4 +1,5 @@
-package com.ua.hillel.homeWork5;
+package com.ua.hillel.homeWork6;
+
 
 public class Lion extends Wild {
 
@@ -6,6 +7,10 @@ public class Lion extends Wild {
         super(id, age, weight, color, isPredator);
     }
 
+    @Override
+    public boolean lovePeople() {
+        return super.lovePeople();
+    }
 
     @Override
     public String voice() {

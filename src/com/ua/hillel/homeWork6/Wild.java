@@ -1,6 +1,7 @@
-package com.ua.hillel.homeWork5;
+package com.ua.hillel.homeWork6;
 
-public class Wild extends Animals {
+
+public class Wild extends Animals implements LovePeople {
 
     protected boolean predator;
 
@@ -12,9 +13,9 @@ public class Wild extends Animals {
         return predator;
     }
 
-    public Wild(int id, double age, double weight, String color, boolean isPredator) {
+    public Wild(int id, double age, double weight, String color, boolean predator) {
         super(id, age, weight, color);
-        this.predator = isPredator;
+        this.predator = predator;
     }
 
     @Override
@@ -23,4 +24,8 @@ public class Wild extends Animals {
     }
 
 
+    @Override
+    public boolean lovePeople() {
+        return false;
+    }
 }

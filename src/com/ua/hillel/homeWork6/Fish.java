@@ -1,4 +1,4 @@
-package com.ua.hillel.homeWork5;
+package com.ua.hillel.homeWork6;
 
 public class Fish extends Home {
 
@@ -8,7 +8,12 @@ public class Fish extends Home {
 
     @Override
     public String voice() {
-        return super.voice() + "  .......";
+        return super.voice() + ".......";
 
+    }
+
+    @Override
+    public boolean lovePeople() {
+        return super.lovePeople();
     }
 }
