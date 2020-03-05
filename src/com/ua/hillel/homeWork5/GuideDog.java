@@ -2,7 +2,7 @@ package com.ua.hillel.homeWork5;
 
 public class GuideDog extends Home {
 
-    protected boolean trained;
+    private boolean trained;
 
 
     public void setTrained(boolean trained) {

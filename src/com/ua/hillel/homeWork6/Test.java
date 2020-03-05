@@ -2,6 +2,8 @@ package com.ua.hillel.homeWork6;
 
 public class Test {
     public static void main(String[] args) {
+
+
         Animals animals = new Animals(0, 0, 0, "0");
         Crocodile crocodile = new Crocodile(1, 12, 186, "Green", true);
         Dog dog = new Dog(2, 9, 7, "Black", "Bars", true);

@@ -4,10 +4,10 @@ import java.security.PublicKey;
 
 public class Animals {
 
-    protected int id;
-    protected double age;
-    protected double weight;
-    protected String color;
+    private int id;
+    private double age;
+    private double weight;
+    private String color;
 
 
     public Animals(int id, double age, double weight, String color) {
@@ -63,9 +63,7 @@ public class Animals {
 
         return "Hello, ";
     }
-//    public boolean eat(){
-//
-//    }
+
 
 
 }

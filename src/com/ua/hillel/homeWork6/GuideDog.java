@@ -1,10 +1,9 @@
 package com.ua.hillel.homeWork6;
 
 
-
 public class GuideDog extends Home {
 
-    protected boolean isTrained;
+    private boolean isTrained;
 
 
     public void setTrained(boolean trained) {

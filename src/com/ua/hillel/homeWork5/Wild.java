@@ -2,7 +2,7 @@ package com.ua.hillel.homeWork5;
 
 public class Wild extends Animals {
 
-    protected boolean predator;
+    private boolean predator;
 
     public void setPredator(boolean predator) {
         this.predator = predator;

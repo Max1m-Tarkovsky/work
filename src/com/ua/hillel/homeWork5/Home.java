@@ -4,8 +4,8 @@ import com.ua.hillel.homeWork6.LovePeople;
 
 public class Home extends Animals implements LovePeople {
 
-    protected String name;
-    protected boolean vaccinated;
+    private String name;
+    private boolean vaccinated;
 
     public Home(int id, double age, double weight, String color, String name, boolean isVaccinated) {
         super(id, age, weight, color);

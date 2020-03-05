@@ -1,11 +1,10 @@
 package com.ua.hillel.homeWork6;
 
 
-
 public class Home extends Animals implements LovePeople {
 
-    protected String name;
-    protected boolean Vaccinated;
+    private String name;
+    private boolean Vaccinated;
 
     public Home(int id, double age, double weight, String color, String name, boolean isVaccinated) {
         super(id, age, weight, color);

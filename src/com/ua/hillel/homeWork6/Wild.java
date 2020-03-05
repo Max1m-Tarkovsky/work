@@ -3,7 +3,7 @@ package com.ua.hillel.homeWork6;
 
 public class Wild extends Animals implements LovePeople {
 
-    protected boolean predator;
+    private boolean predator;
 
     public void setPredator(boolean predator) {
         this.predator = predator;
