@@ -8,6 +8,17 @@ public class MyList {
     String[] myList = new String[0];
 
 
+    public String[] addArray(String[] myList, String[] value) {
+        if (myList == null)
+            return value;
+        if (value == null)
+            return myList;
+        String[] myList1 = new String[myList.length + value.length];
+        System.arraycopy(myList, 0, myList, 0, myList.length);
+        System.arraycopy(value, 0, myList, myList.length, value.length);
+        return myList1;
+    }
+
     public boolean add(String value) {
         if (value == null) {
             return false;
