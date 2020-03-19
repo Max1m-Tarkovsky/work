@@ -1,6 +1,7 @@
 package com.ua.hillel.homeWork9;
 
 import java.util.Collection;
+import java.util.Collections;
 
 public interface CustomCollection {
 
@@ -10,10 +11,8 @@ public interface CustomCollection {
         public String value;
         public String[] value2;
         public Collection value3;
-
-
         public CustomLink next;
-
+        public int indexValue;
 
         public CustomLink(String str) {
             this.value = str;
@@ -30,9 +29,6 @@ public interface CustomCollection {
 
         }
 
-        public void displayLink() {
-            System.out.print(value);
-        }
     }
 
     class CustomLinkList {
@@ -75,46 +71,94 @@ public interface CustomCollection {
             return true;
         }
 
+        boolean delete(String str) {
 
+            first = first.next;
+
+            return true;
+        }
+
+        boolean delete(int index) {
+
+
+            CustomLink currentValue = first;
+            CustomLink previousValue = first;
+            while (currentValue.indexValue != index) {
+                if (currentValue.next == null)
+                    return false;
+                else {
+                    previousValue = currentValue;
+                    currentValue = currentValue.next;
+                }
+            }
+            if (currentValue == first)
+                first = first.next;
+            else
+                previousValue.next = currentValue.next;
+
+            return true;
+        }
+
+
+        String get(int index) {
+            CustomLink currentValue = first;
+            while (currentValue.indexValue != index) {
+                if (currentValue.next == null)
+                    return null;
+                else
+                    currentValue = currentValue.next;
+            }
+
+            return "" + currentValue;
+        }
+
+        boolean contains(String str) {
+
+            CustomLink currentValue = first;
+            while (currentValue.value != str) {
+                if (currentValue.next == null)
+                    return false;
+                else
+                    currentValue = currentValue.next;
+            }
+            return true;
+
+        }
+
+        boolean clear() {
+
+            CustomLinkList linkedList = new CustomLinkList();
+
+            return true;
+
+        }
+
+        int size() {
+
+            CustomLink current = first;
+
+            int i = 0;
+            while (current.value != null)
+                i++;
+            current = current.next;
+
+            {
+                if (current.next == null)
+                    return 0;
+
+                else {
+                    return i;
+                }
+            }
+
+        }
+
+        boolean trim() {
+
+            return true;
+        }
     }
-
-
 }
 
-
-//boolean addAll(Collection strColl);
-
-//  boolean delete (int index);
-
-//boolean delete (String str);
-
-//  String get(int index);
-
-//    boolean contains(String str);
-
-// boolean clear();
-
-//int size();
-
-//boolean trim();
 //  boolean compate(Collection coll);
 
-
-// на основе интерфейса - реализовать коллекцию на основе связного списка
-
-//String[] value  = new String[0];
-
-/*
-    public MyList(String[] myList, String[] value) {
-        if (myList == null)
-            System.out.println(value);
-        if (value == null)
-            System.out.println(myList);
-
-        String[] myList1 = new String[myList.length + value.length];
-        System.arraycopy(myList, 0, myList, 0, myList.length);
-        System.arraycopy(value, 0, myList, myList.length, value.length);
-        System.out.println(myList1);
-
-        this.myList = myList1;
-    }*/
