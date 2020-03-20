@@ -157,8 +157,16 @@ public interface CustomCollection {
 
             return true;
         }
+
+        boolean compare(Collection coll, Collection newColl) {
+
+            if (coll.size() != newColl.size()) {
+                return false;
+            } else return true;
+
+        }
     }
 }
 
-//  boolean compate(Collection coll);
+
 
