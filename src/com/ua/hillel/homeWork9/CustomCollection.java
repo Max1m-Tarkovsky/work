@@ -159,14 +159,21 @@ public interface CustomCollection {
         }
 
         boolean compare(Collection coll, Collection newColl) {
-
-            if (coll.size() != newColl.size()) {
+            if (coll == null || newColl == null){
                 return false;
-            } else return true;
+            }
+                if (coll.size() != newColl.size()) {
+                    return false;
+                }
+            if (!coll.equals(newColl)) {
+                return false;
 
+            } else return true;
         }
+
     }
 }
+
 
 
 
