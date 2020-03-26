@@ -1,8 +1,8 @@
 package com.ua.oldHillel;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
+
+import static java.lang.System.out;
 
 public class ListandArray {
     public static void main(String[] args) {
@@ -32,6 +32,35 @@ public class ListandArray {
         list2.add("KKlm");
         list2.add("Aderf");
 
+        Set<String> list3 =new HashSet<>();
+        list2.hashCode();
+        list3.addAll(list1);
+
+
+
+    }
+    public void AddDouble(List list1,List list2 ){
+
+    }
+
+    @Override
+    public int  hashCode() {
+        if (this = ha){
+            return true;
+        }
+
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        return super.equals(obj);
+    }
+
+    private boolean addDublicate(List list1, List list2) {
+
 
     }
 }
+
+
+

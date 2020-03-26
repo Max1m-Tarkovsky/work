@@ -12,32 +12,31 @@ public class CollectionSortComperatoAndComperator {
         }
 
         System.out.println(" Original deck of card ");
-        for (int i = 0; i < deckOtCards.size(); i++) {
-            System.out.printf("%-20s %s", deckOtCards.get(i), (i + 1) % 4 == 0 ? "\n" : " ");
-        }
+        printOutPut((List<Card>) deckOtCards);
         Collections.shuffle(deckOtCards);
 
         System.out.println("\n\n Cards after Shuffles ");
-        for (int i = 0; i < deckOtCards.size(); i++) {
-            System.out.printf("%-20s %s", deckOtCards.get(i), (i + 1) % 4 == 0 ? "\n" : " ");
-        }
+        printOutPut(deckOtCards);
+
         Collections.sort(deckOtCards, Collections.reverseOrder());
         System.out.println("\n\n Cards after  reverse sort  ");
-        for (int i = 0; i < deckOtCards.size(); i++) {
-            System.out.printf("%-20s %s", deckOtCards.get(i), (i + 1) % 4 == 0 ? "\n" : " ");
-        }
+        printOutPut(deckOtCards);
+
         Collections.sort(deckOtCards);
         System.out.println("\n\n Cards after sort   ");
-        for (int i = 0; i < deckOtCards.size(); i++) {
-            System.out.printf("%-20s %s", deckOtCards.get(i), (i + 1) % 4 == 0 ? "\n" : " ");
-        }
+        printOutPut(deckOtCards);
+
         Collections.sort(deckOtCards, new CardComparator());
         System.out.println("\n\n Cards after Comparator  sort  ");
+        printOutPut(deckOtCards);
+
+
+    }
+
+    private static void printOutPut(List<Card> deckOtCards) {
         for (int i = 0; i < deckOtCards.size(); i++) {
             System.out.printf("%-20s %s", deckOtCards.get(i), (i + 1) % 4 == 0 ? "\n" : " ");
         }
-
-
     }
 
     public static class Card implements Comparable<Card> {
