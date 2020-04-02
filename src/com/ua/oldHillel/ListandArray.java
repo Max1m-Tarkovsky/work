@@ -1,66 +1,68 @@
 package com.ua.oldHillel;
 
+
 import java.util.*;
 
 import static java.lang.System.out;
 
 public class ListandArray {
+
     public static void main(String[] args) {
-        List<String> list1 = new LinkedList<>();
-        list1.add("Tim");
-        list1.add("Rim");
-        list1.add("Vim");
-        list1.add("Fim");
-        list1.add("Yim");
-        list1.add("Wim");
-        list1.add("Jim");
-        list1.add("Kim");
-        list1.add("Lim");
-        list1.add("Pim");
-
-        List<String> list2 = new ArrayList<>();
-        list2.add("Klim");
-        list2.add("Fim");
-        list2.add("Yim");
-        list2.add("Wim");
-        list2.add("Jim");
-        list2.add("Kim");
-        list2.add("Lim");
-        list2.add("Brim");
-        list2.add("Ounm");
-        list2.add("Loijm");
-        list2.add("KKlm");
-        list2.add("Aderf");
-
-        Set<String> list3 =new HashSet<>();
-        list2.hashCode();
-        list3.addAll(list1);
+        Dog dog = new Dog("Tim");
+        List<Dog> list1 = new ArrayList<>();
+        list1.add(dog);
+        list1.add(new Dog("Rim"));
+        list1.add(new Dog("Vim"));
+        list1.add(new Dog("Fim"));
+        list1.add(new Dog("Yim"));
+        list1.add(new Dog("Wim"));
+        list1.add(new Dog("Jim"));
+        list1.add(new Dog("Kim"));
+        list1.add(new Dog("Lim"));
+        list1.add(new Dog("Pim"));
 
 
+        List<Dog> list2 = new LinkedList<>();
+        list2.add(new Dog("Klim"));
+        list2.add(new Dog("Fim"));
+        list2.add(new Dog("Yim"));
+        list2.add(new Dog("Wim"));
+        list2.add(new Dog("Jim"));
+        list2.add(new Dog("Kim"));
+        list2.add(new Dog("Lim"));
+        list2.add(new Dog("Brim"));
+        list2.add(new Dog("Ounm"));
+        list2.add(new Dog("Loijm"));
+        list2.add(new Dog("KKlm"));
+        list2.add(new Dog("Aderf"));
 
-    }
-    public void AddDouble(List list1,List list2 ){
+        Collection<Dog> dogs = addDoubleColl(list1, list2);
 
-    }
 
-    @Override
-    public int  hashCode() {
-        if (this = ha){
-            return true;
+        //Collections.reverseOrder();
+
+
+        for (int i = 0; i < list1.size(); i++) {
+            out.println(i + 1 + ". " + list1.get(i));
         }
 
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        return super.equals(obj);
-    }
-
-    private boolean addDublicate(List list1, List list2) {
-
 
     }
+
+    public static Collection<Dog> addDoubleColl(List<Dog> list1, List<Dog> list2) {
+        Set<String> nameSet = new HashSet<>();
+        for (Dog dog : list1) {
+            nameSet.add(dog.getName());
+        }
+        for (Dog dog1 : list2) {
+            if (nameSet.contains(dog1.getName())) {
+                list1.add(dog1);
+            }
+
+        }
+        return list1;
+    }
+
 }
-
 
 

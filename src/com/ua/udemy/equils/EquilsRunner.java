@@ -30,7 +30,7 @@ public class EquilsRunner {
     }
 
     private static void print(Set<CAR> cars) {
-        System.out.printf("%-20s %-20s %-20s \n", "Car  brand", "Model", "Price per day");
+        System.out.printf("%-20s %-20s %-20s \n", "Car brand", "Model", "Price per day");
         for (CAR car : cars){
 
             System.out.printf("%-20s %-20s %-20s\n", car.getCarBrand(), car.getModel(), car.getPricePerDay());
