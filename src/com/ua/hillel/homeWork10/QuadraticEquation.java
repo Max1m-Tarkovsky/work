@@ -1,5 +1,8 @@
 package com.ua.hillel.homeWork10;
 
+import java.util.Collection;
+import java.util.HashSet;
+
 public class QuadraticEquation {
     public static double equation(double x, int n, int k) {
 
@@ -26,6 +29,8 @@ public class QuadraticEquation {
     public static void main(String[] args) {
         System.out.println(decision(5, 8));
     }
+
+
 
 
 }
