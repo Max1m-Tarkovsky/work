@@ -1,9 +1,7 @@
 package com.ua.hillel.homeWork15;
 
 import java.io.*;
-import java.sql.SQLOutput;
 import java.util.InputMismatchException;
-import java.util.Objects;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -154,18 +152,33 @@ public class RockPaperScissors {
         System.out.println("Played games =" + numberOfGames);
 
     }
-    public void writeToFile () throws IOException {
+
+    public void writeNewToFile() throws IOException {
         String wayToFail = "/Users/maksim/Документы/Hillel/ClasWork/src/com/ua/hillel/homeWork15";
-        String fileForWrite = "WriteToFail.txt";
+        String fileForWrite = "failToWrite11.txt";
         File file = new File(wayToFail, fileForWrite);
         System.out.println(file.createNewFile());
-        BufferedWriter writer = new BufferedWriter(new FileWriter("WriteToFail.txt"));
-        writer.write("Value won = " + userScore+"\nValue lose = " + computerScore+"\nTies = " + (numberOfGames - userScore - computerScore) +"\nPlayed games = " + numberOfGames );
-        writer.close();
+       /* BufferedWriter writer = new BufferedWriter(new FileWriter("failToWrite11.txt"));
+        writer.write("Value won = " + userScore + "\nValue lose = " + computerScore + "\nTies = " + (numberOfGames - userScore - computerScore) + "\nPlayed games = " + numberOfGames);
+        writer.close();*/
+        try(FileWriter writer = new FileWriter("failToWrite11.txt", false))
+        {
 
+            String text = "Value won = " + userScore + "\nValue lose = " + computerScore + "\nTies = " + (numberOfGames - userScore - computerScore) + "\nPlayed games = " + numberOfGames;
+            writer.write(text);
+
+        }
+        catch(IOException ex){
+
+            System.out.println(ex.getMessage());
+        }
     }
-    public static void readFromFile(){
-        String inputFileName = "/Users/maksim/Документы/Hillel/ClasWork/src/com/ua/hillel/homeWork15//WriteToFail.txt";
+
+
+
+
+    public static void readFromFile() throws IOException {
+        String inputFileName = "/Users/maksim/Документы/Hillel/ClasWork/src/com/ua/hillel/homeWork15/failToWrite11.txt";
 
         try (BufferedReader reader = new BufferedReader(new FileReader(inputFileName))) {
             String line;
@@ -177,15 +190,15 @@ public class RockPaperScissors {
         } catch (IOException e) {
             e.printStackTrace();
         }
-    }
 
+    }
 
 
     public static void main(String[] args) throws IOException {
         RockPaperScissors game = new RockPaperScissors();
         game.startGame();
-        game.writeToFile();
-        game.readFromFile();
+        game.writeNewToFile();
+        readFromFile();
     }
 }
 
