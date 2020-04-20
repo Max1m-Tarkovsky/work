@@ -1,0 +1,4 @@
+Value won = 0
+Value lose = 1
+Ties = 0
+Played games = 1
