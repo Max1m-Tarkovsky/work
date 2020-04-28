@@ -1,11 +1,22 @@
 package com.ua.hillel.HomeWork17;
 
-public class ATM2 {
+public class BroughtATM {
+    public static void main(String[] args) {
+       BroughtATM br = new BroughtATM();
+        Thread threadTh = new TreadTh("max");
+        Thread threadRun = new Thread(new ThreadRun());
+        threadTh.start();
+        threadRun.start();
 
+
+    }
 
     private static int moneyATM = 1000;
 
-    public synchronized static void putMethod(int money) {
+
+
+
+    public void putMethod(int money) {
         if (moneyATM > 1000000) {
             System.out.println(" Sorry ATM crowded");
         } else moneyATM = moneyATM + money;
@@ -13,7 +24,7 @@ public class ATM2 {
         System.out.println("Остаток в банкомате  " + moneyATM);
     }
 
-    public synchronized static void takeMethod(int money) {
+    public  void takeMethod(int money) {
         if (moneyATM < money) {
             System.out.println(" Sorry ATM empty");
         } else moneyATM = moneyATM - money;
