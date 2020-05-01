@@ -27,60 +27,14 @@ public class QuadraticEquation {
             x1 = (-b - Math.sqrt(D)) / (2 * a);
             x2 = (-b + Math.sqrt(D)) / (2 * a);
             System.out.println("Root a quadratic : First  = " + x1 + ", Second  = " + x2);
-        }
-        else if (D == 0) {
+        } else if (D == 0) {
             double x;
             x = -b / (2 * a);
             System.out.println("The equation has a single root : x = " + x);
-        }
-        else {
+        } else {
             System.out.println("The equation don't has root! ");
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-   /* public static double equation(double x, int n, int k) {
-
-        return Math.sin(Math.pow(x, n)) + Math.pow(x, k) * x - 13;
-
-    }
-
-    public static double decision(double value1, double value2) {
-        if (value2 - value1 <= 0.00001) {
-            return value1;
-        }
-        int n = 6;
-        int k = 2;
-        double x = value1 + (value2 - value1) / 2;
-
-        if (equation(value1, n, k) * equation(x, n, k) > 0) {
-            return decision(x, value2);
-        } else {
-
-            return decision(value1, x);
-        }
-    }
-
-    public static void main(String[] args) {
-
-        System.out.println(decision(2, 4));
-    }
-*/
-
-
+        
     }
 
 
