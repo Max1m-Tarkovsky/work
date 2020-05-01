@@ -23,6 +23,8 @@ public class MyListTest {
     @Test
     public void add() {
         assertEquals("Should be true ", true, myList.add("d"));
+        assertEquals("Collection hav this element ",true,myList.contains("d"));
+        assertEquals("collection increased ",3,myList.getSize());
     }
 
     @Test
