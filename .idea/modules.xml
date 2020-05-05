@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/ClasWork.iml" filepath="$PROJECT_DIR$/ClasWork.iml" />
       <module fileurl="file://$PROJECT_DIR$/Test/Test.iml" filepath="$PROJECT_DIR$/Test/Test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/src/com/ua/hillel/homeWork16/pars/pars.iml" filepath="$PROJECT_DIR$/src/com/ua/hillel/homeWork16/pars/pars.iml" />
     </modules>
   </component>
 </project>

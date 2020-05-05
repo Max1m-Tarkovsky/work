@@ -1,6 +1,8 @@
 package com.ua.udemy.ThreeMappSet;
 
-public class SubjectGrade {
+import java.io.Serializable;
+
+public class SubjectGrade implements Serializable {
     private final String subject;
     private final int grade;
 
