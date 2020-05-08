@@ -7,10 +7,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="Test" />
+        <module name="jdbsFirst" />
         <module name="pars" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="jdbsFirst" target="9" />
       <module name="mavenTest" target="1.5" />
       <module name="MySqml" target="1.5" />
       <module name="pars" target="1.8" />
