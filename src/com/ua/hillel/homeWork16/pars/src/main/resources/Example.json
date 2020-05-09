@@ -1,0 +1,14 @@
+{
+  "name": "Max Tarkovsky ",
+  "java": true,
+  "age": 24.0,
+  "permission": [
+    "READ",
+    "WRITE",
+    "CREATE"
+  ],
+  "identifiers": {
+    "phone": "123456",
+    "email": "max@gmail.com"
+  }
+}
