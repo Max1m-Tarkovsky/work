@@ -9,7 +9,12 @@
 <h2>Student List</h2>
 <p><a href='<c:url value="/create" />'>Create new</a></p>
 <table>
-<tr><th>Id</th><th>first_name</th><th>last_name</th><th>groupp</th><th>year_of_receiptp</th><th></th></tr>
+<tr><th>Id</th>
+<th>first_name</th>
+<th>last_name</th>
+<th>groupp</th>
+<th>year_of_receipt</th>
+<th></th></tr>
 <c:forEach var="student" items="${students}">
  <tr><td>${student.id}</td>
     <td>${student.First_name}</td>

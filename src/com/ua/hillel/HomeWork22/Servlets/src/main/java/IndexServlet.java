@@ -17,9 +17,7 @@ IndexServlet extends HttpServlet {
         ArrayList<Student> students = null;
         try {
             Test.nameAllStudent();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        } catch (ClassNotFoundException e) {
+        } catch (SQLException | ClassNotFoundException e) {
             e.printStackTrace();
         }
         request.setAttribute("student", students);

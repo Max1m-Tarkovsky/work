@@ -6,6 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="Servlets" />
         <module name="Test" />
         <module name="jdbsFirst" />
         <module name="pars" />
@@ -16,6 +17,8 @@
       <module name="mavenTest" target="1.5" />
       <module name="MySqml" target="1.5" />
       <module name="pars" target="1.8" />
+      <module name="Servlet2" target="1.5" />
+      <module name="Servlets" target="1.8" />
       <module name="Test" target="1.8" />
       <module name="TestTest" target="1.8" />
     </bytecodeTargetLevel>
