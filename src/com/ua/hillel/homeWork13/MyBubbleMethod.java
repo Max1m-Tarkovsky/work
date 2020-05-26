@@ -5,7 +5,7 @@ import java.util.Arrays;
 
 public class MyBubbleMethod {
     public static void main(String[] args) {
-        int[] arr = {5, 4, 3, 2, 1};
+        int[] arr = {27,12,35,3,1};
         int temp;
         boolean sort = false;
         while (!sort) {

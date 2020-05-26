@@ -8,14 +8,14 @@ public class MyList {
     String[] myList = new String[0];
 
 
-    public String[] addArray(String[] myList, String[] value) {
-        if (myList == null)
+    public String[] addArray(String[] value1, String[] value) {
+        if (value1 == null)
             return value;
         if (value == null)
-            return myList;
-        String[] myList1 = new String[myList.length + value.length];
-        System.arraycopy(myList, 0, myList, 0, myList.length);
-        System.arraycopy(value, 0, myList, myList.length, value.length);
+            return value1;
+        String[] myList1 = new String[value1.length - 1 + value.length - 1];
+        System.arraycopy(value1, 0, value1, 0, value1.length - 1);
+        System.arraycopy(value, 0, value1, value1.length - 1, value.length - 1);
         return myList1;
     }
 
@@ -62,24 +62,20 @@ public class MyList {
         return false;
     }
 
-    public boolean equals(String[] value) {
-        if (value == null) {
+    public boolean isEquals(int i, int i1) {
+        if (!myList[i].equals(myList[i1])) {
             return false;
-        }
-        if (!(myList.length == (value.length))) {
-            return false;
+        } else return true;
 
-        }
-        for (int i = 0; i < myList.length; i++) {
-            if (!myList[i].equals(value[i])) ;
-            return false;
-        }
-        return true;
     }
 
 
-    public void clear() {
+    public boolean clear() {
         myList = new String[0];
+        if (myList.length == 0) {
+            return true;
+        }
+        return false;
 
     }
 
@@ -88,7 +84,7 @@ public class MyList {
         if (value == null) {
             return -1;
         }
-        for (int i = 0; i < myList.length; i++) {
+        for (int i = 0; i < myList.length - 1; i++) {
             if (value.equals(myList[i])) {
                 return i;
             }
@@ -99,7 +95,7 @@ public class MyList {
 
     public int getSize() {
 
-        return myList.length;
+        return myList.length - 1;
     }
 
     public String get(int value) {

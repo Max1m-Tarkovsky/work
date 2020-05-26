@@ -12,68 +12,12 @@ import java.util.Map;
 import java.util.stream.Stream;
 
 public class ConventatorFile {
-    static Map jsonMap;
+    static Map<String, Object> jsonMap;
     static Map<String, Object> yamlMap;
 
     public static void main(String[] args) throws IOException {
         conventatorFile("/Users/maksim/Документы/Hillel/ClasWork/src/com/ua/hillel/homeWork16/pars/src/main/resources/Example.json");
         conventatorFile("/Users/maksim/Документы/Hillel/ClasWork/src/com/ua/hillel/homeWork16/pars/src/main/resources/Example.yaml");
-    }
-
-    public static void writeNewToFile(String fileWay, String text) {
-        BufferedWriter writer = null;
-        try {
-
-            writer = new BufferedWriter(new FileWriter(fileWay));
-            writer.write(text);
-        } catch (IOException e) {
-            e.printStackTrace();
-        } finally {
-            try {
-                if (writer != null) {
-                    writer.flush();
-                    writer.close();
-                }
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
-
-
-    }
-
-    public static String getExtension(String filename) {
-        String extension = "";
-
-        int i = filename.lastIndexOf('.');
-        if (i > 0) {
-            extension = filename.substring(i + 1);
-        }
-        return extension;
-    }
-
-    public static String getInformationOfFile(String filename) {
-        String root = "";
-
-        int i = filename.lastIndexOf('/');
-        if (i > 0) {
-            root = filename.substring(0, i + 1);
-        }
-
-        return root;
-    }
-
-
-    public static String readToFile(String path) {
-        StringBuilder contentBuilder = new StringBuilder();
-
-        try (Stream<String> stream = Files.lines(Paths.get(path), StandardCharsets.UTF_8)) {
-            stream.forEach(s -> contentBuilder.append(s).append("\n"));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        return contentBuilder.toString();
     }
 
     public static void conventatorFile(String fileWay) throws IOException {
@@ -104,5 +48,59 @@ public class ConventatorFile {
         System.out.println("Conversion completed correctly ");
     }
 
+    public static String getInformationOfFile(String filename) {
+        String root = "";
+
+        int i = filename.lastIndexOf('/');
+        if (i > 0) {
+            root = filename.substring(0, i + 1);
+        }
+
+        return root;
+    }
+
+    public static String getExtension(String filename) {
+        String extension = "";
+
+        int i = filename.lastIndexOf('.');
+        if (i > 0) {
+            extension = filename.substring(i + 1);
+        }
+        return extension;
+    }
+
+    public static String readToFile(String path) {
+        StringBuilder contentBuilder = new StringBuilder();
+
+        try (Stream<String> stream = Files.lines(Paths.get(path), StandardCharsets.UTF_8)) {
+            stream.forEach(s -> contentBuilder.append(s).append("\n"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return contentBuilder.toString();
+    }
+
+    public static void writeNewToFile(String fileWay, String text) {
+        BufferedWriter writer = null;
+        try {
+
+            writer = new BufferedWriter(new FileWriter(fileWay));
+            writer.write(text);
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                if (writer != null) {
+                    writer.flush();
+                    writer.close();
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+
+
+    }
 
 }

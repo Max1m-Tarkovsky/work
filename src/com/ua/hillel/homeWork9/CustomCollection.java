@@ -52,7 +52,7 @@ public interface CustomCollection {
             return true;
         }
 
-        boolean addAll(String[] strArr) {
+       public boolean addAll(String[] strArr) {
 
             CustomLink newLink1 = new CustomLink(strArr);
             newLink1.next = first;

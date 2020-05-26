@@ -12,9 +12,10 @@ public class Main {
         LinkedList1.add("Photo");
         LinkedList1.add("Photo1");
         LinkedList1.add("Photo3");
-        LinkedList1.delete("Photo");
+        System.out.println(LinkedList1);
+        /*LinkedList1.delete("Photo");
         LinkedList1.addAll(new String[]{"Value", "Value2"});
-       // LinkedList1.addAll((Collection) LinkedList1);
+        // LinkedList1.addAll((Collection) LinkedList1);
         LinkedList1.contains("Photo1");
         LinkedList1.delete(2);
         System.out.println(LinkedList1.size());
@@ -22,11 +23,8 @@ public class Main {
 
 
 
-
-
         LinkedList1.clear();
-
-
+*/
 
     }
 }

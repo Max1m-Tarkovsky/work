@@ -32,6 +32,7 @@ public class MyListTest {
         assertEquals("Should be true ", true, myList.delete("b"));
     }
 
+
     @Test
     public void contains() {
         assertEquals("Should be true ", true, myList.contains("a"));

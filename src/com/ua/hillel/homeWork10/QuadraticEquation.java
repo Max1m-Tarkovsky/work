@@ -34,7 +34,7 @@ public class QuadraticEquation {
         } else {
             System.out.println("The equation don't has root! ");
         }
-        
+
     }
 
 
